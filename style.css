@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+html, body {
+  overflow: hidden;
+  height: 100%;
+}
 
 body {
   margin: 0;
@@ -8,10 +11,10 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  color: #000;
   text-align: center;
+  color: #000;
   padding: 0 20px;
+  box-sizing: border-box;
 }
 
 img.logo {
@@ -23,6 +26,7 @@ img.logo {
 h1 {
   margin: 20px 0 10px;
   font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .socials {
@@ -46,34 +50,43 @@ h1 {
 .action-buttons {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   width: 100%;
-  max-width: 400px;
+  max-width: 340px;
   margin-top: 20px;
 }
 
 .action-buttons a {
-  width: 100%;
-  background: #000;
-  color: #F4BA16;
+  display: block;
   padding: 14px 0;
   font-size: 1rem;
   border-radius: 6px;
   text-decoration: none;
-  transition: background-color 0.2s ease, transform 0.2s ease;
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-weight: bold;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.action-buttons .donate {
+  background: #000;
+  color: #F4BA16;
+  border: 2px solid #000;
+}
+
+.action-buttons .contact {
+  border: 2px solid #000;
+  color: #000;
+  background-color: transparent;
 }
 
 .action-buttons a:hover {
-  background-color: #333;
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
-@media (min-width: 600px) {
-  .action-buttons {
-    flex-direction: row;
-  }
+.action-buttons .donate:hover {
+  background-color: #333;
+}
+
+.action-buttons .contact:hover {
+  background-color: #f7d74f;
 }
